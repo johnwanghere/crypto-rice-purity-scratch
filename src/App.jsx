@@ -53,7 +53,7 @@ function App() {
                 <tr key={question.id} className="border-b border-gray-700">
                   <td className="py-4 pr-4 text-center w-12">{question.id}</td>
                   <td className="py-4 items-center gap-4">
-                    <div className="flex items-center gap-4 cursor-pointer" onClick={() => checkBox(question)}>
+                    <div className="flex items-center gap-4 cursor-pointer">
                       <Checkbox onChange={() => checkBox(question)} data={question.data} />
                     </div>
                   </td>
@@ -69,7 +69,7 @@ function App() {
                 <tr>
                   <button className="bg-purple-950 text-cyan-50 px-6 py-3 m-4 rounded-lg hover:bg-purple-900 transition-colors" onClick={() => {
                     setScore(0);
-                    setCheckedBoxes(new Set());
+                    setChecked(new Set());
                   }}>
                     Back
                   </button>

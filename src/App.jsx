@@ -11,6 +11,10 @@ function App() {
       const newCheckedBoxes = new Set(checkedBoxes);
       newCheckedBoxes.add(question.id);
       setChecked(newCheckedBoxes);
+    } else {
+      const newCheckedBoxes = new Set(checkedBoxes);
+      newCheckedBoxes.delete(question.id);
+      setChecked(newCheckedBoxes);
     }
   }
 
